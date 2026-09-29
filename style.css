@@ -1,9 +1,13 @@
-* {
+```css
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+
   font-family: "Roboto", sans-serif;
   color: #212121;
   background-color: #ffffff;
@@ -13,6 +17,13 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 a {
@@ -28,6 +39,11 @@ img {
   max-width: 100%;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -41,18 +57,20 @@ img {
 }
 
 
+/* =========================
+   HEADER
+   ========================= */
+
 .header {
-  background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
+  background-color: #ffffff;
 }
 
 .header-container {
-  width: 1200px;
-  margin: 0 auto;
-  min-height: 80px;
-
   display: flex;
   align-items: center;
+
+  min-height: 80px;
 }
 
 .header-logo {
@@ -75,8 +93,6 @@ img {
 }
 
 .header-nav-link {
-  position: relative;
-
   padding: 30px 0;
 
   font-size: 14px;
@@ -84,35 +100,27 @@ img {
   font-weight: 500;
 
   color: #212121;
-
-  transition: color 250ms ease;
 }
 
 .header-nav-link:hover,
-.header-nav-link:focus {
-  color: #2196f3;
-}
-
+.header-nav-link:focus,
 .header-nav-link--active {
   color: #2196f3;
 }
 
 .header-contacts {
-  margin-left: auto;
-
   display: flex;
   align-items: center;
   gap: 40px;
+
+  margin-left: auto;
 }
 
 .header-contacts-link {
   font-size: 14px;
   line-height: 1.14;
-  font-weight: 400;
 
   color: #757575;
-
-  transition: color 250ms ease;
 }
 
 .header-contacts-link:hover,
@@ -121,15 +129,16 @@ img {
 }
 
 
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
   background-color: #2f303a;
 }
 
 .hero-container {
-  width: 1200px;
   min-height: 500px;
-  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -138,8 +147,7 @@ img {
 }
 
 .hero-title {
-  max-width: 700px;
-  margin: 0 0 30px;
+  margin-bottom: 30px;
 
   text-align: center;
 
@@ -154,7 +162,7 @@ img {
   min-width: 200px;
   padding: 16px 32px;
 
-  border: 0;
+  border: none;
   border-radius: 4px;
 
   background-color: #2196f3;
@@ -165,24 +173,15 @@ img {
   font-weight: 700;
 
   cursor: pointer;
-
-  transition: background-color 250ms ease;
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #188ce8;
 }
 
 
+/* =========================
+   ADVANTAGES
+   ========================= */
 
 .advantages {
   padding: 94px 0 0;
-}
-
-.advantages-container {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .advantages-list {
@@ -195,51 +194,42 @@ img {
 }
 
 .advantages-item-title {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
-
-  color: #212121;
 }
 
 .advantages-item-text {
-  margin: 0;
-
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 400;
 
   color: #757575;
 }
 
 
+/* =========================
+   SECTION TITLE
+   ========================= */
+
 .section-title {
-  margin: 0;
+  margin-bottom: 50px;
 
   text-align: center;
 
   font-size: 36px;
   line-height: 1.17;
   font-weight: 700;
-
-  color: #212121;
 }
 
 
+/* =========================
+   WORK
+   ========================= */
 
 .work {
   padding: 94px 0;
-}
-
-.work-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.work .section-title {
-  margin-bottom: 50px;
 }
 
 .work-list {
@@ -259,20 +249,14 @@ img {
 }
 
 
+/* =========================
+   TEAM
+   ========================= */
 
 .team {
   padding: 94px 0;
 
   background-color: #f5f4fa;
-}
-
-.team-container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.team .section-title {
-  margin-bottom: 50px;
 }
 
 .team-list {
@@ -289,10 +273,6 @@ img {
     0 2px 1px rgba(0, 0, 0, 0.08),
     0 1px 1px rgba(0, 0, 0, 0.06),
     0 1px 3px rgba(0, 0, 0, 0.16);
-
-  border-radius: 0 0 4px 4px;
-
-  overflow: hidden;
 }
 
 .team-card-image {
@@ -304,30 +284,108 @@ img {
 
 .team-card-content {
   padding: 30px 20px;
+
   text-align: center;
 }
 
 .team-card-name {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 
   font-size: 16px;
   line-height: 1.19;
   font-weight: 500;
-
-  color: #212121;
 }
 
 .team-card-position {
-  margin: 0;
-
   font-size: 16px;
   line-height: 1.19;
-  font-weight: 400;
 
   color: #757575;
 }
 
 
+/* =========================
+   PORTFOLIO
+   ========================= */
+
+.portfolio {
+  padding: 94px 0;
+}
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 50px;
+}
+
+.portfolio-filter-button {
+  padding: 6px 22px;
+
+  border: none;
+  border-radius: 4px;
+
+  background-color: #f5f4fa;
+  color: #212121;
+
+  font-size: 16px;
+  line-height: 1.62;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.portfolio-filter-button:hover,
+.portfolio-filter-button:focus,
+.portfolio-filter-button--active {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-card {
+  width: calc((100% - 60px) / 3);
+
+  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+}
+
+.portfolio-card-image {
+  width: 100%;
+  height: 294px;
+
+  object-fit: cover;
+}
+
+.portfolio-card-content {
+  padding: 20px 24px;
+}
+
+.portfolio-card-title {
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.portfolio-card-category {
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: #757575;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .footer {
   padding: 60px 0;
@@ -336,12 +394,12 @@ img {
 }
 
 .footer-container {
-  width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-logo {
-  display: inline-block;
   margin-bottom: 20px;
 
   font-size: 26px;
@@ -364,11 +422,8 @@ img {
 }
 
 .footer-address-text {
-  margin: 0;
-
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 400;
 
   color: #ffffff;
 }
@@ -376,14 +431,12 @@ img {
 .footer-contact {
   font-size: 14px;
   line-height: 1.71;
-  font-weight: 400;
 
   color: rgba(255, 255, 255, 0.6);
-
-  transition: color 250ms ease;
 }
 
 .footer-contact:hover,
 .footer-contact:focus {
   color: #2196f3;
 }
+```
